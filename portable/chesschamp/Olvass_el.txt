@@ -1,0 +1,18 @@
+﻿A sakkprogram indítasa:
+
+A program 8-as java-val keszült, így futtatásanak feltétele a 8-as java futtató környezet, JRE 8 (Windows), vagy JDK 8 (Windows, Linux, Mac OS) telepítése.
+
+-Windows: a chesschamp.exe-re kattintva ( a Windows lehet, hogy nem mutatja a .exe kiterjesztést! ).
+
+-Linux (debian alapu), pl. Ubuntu, Linux Mint: a chesschamp_start.sh-ra kattintva, aztán futtatás, vagy futtatás terminálban.
+ Bár alapbol be van állítva, ehhez elkepzelhetően a tulajdonságok --> jogosultságoknál be kell jelölni a
+ "File végrehajtásának engedélyezése programként" négyzetet.
+ Terminálból való indítás: az alapmappába való belépés - "cd ÚTVONAL_A_MAPPÁHOZ/chesschamp" - futtatás: "./chesschamp_start.sh".
+ Elképzelhető, bár alapból be van állítva, hogy előtte a "chmod +x chesschamp_start.sh" is kell, hogy a file futtatható legyen.
+ 
+-Mac OS és nem debian alapú rendszereken: megegyezik a Linuxos terminálból való indítással:
+ Az alapmappába való belépés után - "cd ÚTVONAL_A_MAPPÁHOZ/chesschamp" - futtatás: "./chesschamp_start.sh".
+ Elképzelhető, bár alapból be van állítva, hogy előtte a "chmod +x chesschamp_start.sh" parancs is kell, hogy a file futtatható legyen.
+
+Maximum 200 lépés ( 200 világos és 200 sötet lépés ) lehetséges egy játszmában,
+de ez csak elméleti határ, mert egy 60 lépéses játék is már hosszúnak számít!

@@ -1,0 +1,14 @@
+1. e2-e4,  e7-e5
+2. Vd1-g4,  Hg8-f6
+3. Vg4-f5,  Hb8-c6
+4. Hb1-c3,  d7-d5
+5. Vf5-g5,  h7-h6
+6. Vg5-h4,  g7-g5
+7. Vh4-g3,  d5xe4
+8. Ff1-c4,  a7-a6
+9. a2-a3,  Ff8-d6
+10. Vg3-e3,  Hc6-d4
+11. Hc3xe4,  Hd4xc2+
+12. Ke1-d1,  Hc2xe3+
+13. d2xe3,  Hf6xe4
+14. Kd1-e2

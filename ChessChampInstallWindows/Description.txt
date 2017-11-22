@@ -1,0 +1,16 @@
+﻿ChessChamp
+
+Sakk program, chess program
+
+Magyar leírás:
+Ez egy sakkprogram grafikus felülettel. A számítógép ellen lehet játszani vele kezdő és haladó szinten.
+A játszmákat el lehet menteni és újra betölteni.
+Magyar és angol menü van benne.
+Java nyelven íródott, így futtatásának (de nem a telepítésének) feltétele a JRE 8 vagy JDK 8 telepítése!
+
+English description:
+It is a chess program with GUI. You can play against the computer in beginner and advanced level.
+You can save and load the games.
+It has english and hungarian menu.
+It is written in Java language, so to run (but not to install), you need JRE 8 or JDK 8 installed on your OS.
+

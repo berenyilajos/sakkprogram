@@ -1,0 +1,21 @@
+﻿A sakkprogram telepítése debian alpú Linux OS-eken (Ubuntu, Linux Mint, Debian):
+ A terminálban:
+-cd Path/chesschamp
+-sudo dpkg -i chesschamp_1.0-ubuntu_all.deb
+Vagy nyisd meg a chesschamp_1.0-ubuntu_all.deb file-t a Synaptikban vagy a Szoftverközponban, és telepítsd!
+
+A program 8-as java-val keszült, így futtatásanak feltétele a 8-as java futtató környezet, JDK 8 telepítése!
+ Ha nincs JDK 8 a számítógépeden, telepítheted a terminallal:
+-sudo apt-get install python-software-properties (opcionális, talán nem szükséges)
+-sudo add-apt-repository ppa:webupd8team/java
+-sudo apt-get update
+-sudo apt-get install oracle-java8-installer
+-sudo apt-get install oracle-java8-set-default
+
+Maximum 200 lépés ( 200 világos és 200 sötet ) lehetséges egy játszmában,
+de ez csak elméleti határ, mert egy 60 lépéses játék is már hosszúnak számít!
+
+A program eltávolítása:
+ Terminálban:
+-sudo dpkg -r chesschamp
+Vagy eltávolítás a Synaptic-kal.

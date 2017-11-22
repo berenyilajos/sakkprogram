@@ -1,0 +1,7 @@
+﻿A sakkprogram telepítése:
+ A chesschampsetup.exe futtatásával.
+
+A program 8-as java-val keszült, így futtatásanak feltétele a 8-as java futtató környezet, JRE 8 vagy JDK 8 telepítése!
+
+Maximum 200 lépés ( 200 világos és 200 sötet ) lehetséges egy játszmában,
+de ez csak elméleti határ, mert egy 60 lépéses játék is már hosszúnak számít!
