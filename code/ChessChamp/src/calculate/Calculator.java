@@ -1328,12 +1328,12 @@ public class Calculator implements Constants {
     return bab;
   }
 
-  private int vegallas() {
+  private int vegallas(int veg, int ellenveg) {
     int e = 1;
     if (lepes % 2 == 1) {
       e = -1;
     }
-    int veg = e * -10010, csere;
+    int csere;
 
     hibaSanc = false;
     sancol();
@@ -1375,9 +1375,9 @@ public class Calculator implements Constants {
         if (csere * e > veg * e) {
           veg = csere;
           lepes--;
-//            if (veg*e==1000){
-//                return veg;
-//            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if (veg * e >= ellenveg * e){
+              return veg;
+            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         } else {
           lepes--;
         }
@@ -1426,9 +1426,9 @@ public class Calculator implements Constants {
         if (csere * e > veg * e) {
           veg = csere;
           lepes--;
-//            if (veg*e==10000){
-//                return veg;
-//            }
+            if (veg * e >= ellenveg * e){
+              return veg;
+            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         } else {
           lepes--;
         }
@@ -1492,7 +1492,7 @@ public class Calculator implements Constants {
               if (csere * e > veg * e) {
                 veg = csere;
                 lepes--;
-//            if (veg*e==1000) return veg;
+            if (veg * e >= ellenveg * e) {return veg;}//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
               } else {
                 lepes--;
               }
@@ -1548,7 +1548,7 @@ public class Calculator implements Constants {
                 if (csere * e > veg * e) {
                   veg = csere;
                   lepes--;
-//            if (veg*e==1000) return veg;
+                  if (veg * e >= ellenveg * e) {return veg;}//@@@@@@@@@@@@@@@@@@@@@@@@
                 } else {
                   lepes--;
                 }
@@ -1563,17 +1563,17 @@ public class Calculator implements Constants {
     return veg;
   }
 
-  private int kozepallas(int f) {
+  private int kozepallas(int f, int veg, int ellenveg) {
     f--;
     if (f == 0) {
-      return vegallas();
+      return vegallas(veg, ellenveg);
     }
 
     int e = 1;
     if (lepes % 2 == 1) {
       e = -1;
     }
-    int veg = e * -10010, csere;
+    int csere;
     hibaSanc = false;
     sancol();
     if (!hibaSanc) {
@@ -1608,15 +1608,15 @@ public class Calculator implements Constants {
             csere = 0;
           }
         } else {
-          csere = kozepallas(f);
+          csere = kozepallas(f, ellenveg, veg);
         }
 
         if (csere * e > veg * e) {
           veg = csere;
           lepes--;
-//            if (veg*e==1000){
-//                return veg;
-//            }//@@@@@@@@@@@@@@@@@@@@@@
+            if (veg * e >= ellenveg * e){
+              return veg;
+            }//@@@@@@@@@@@@@@@@@@@@@@
         } else {
           lepes--;
         }
@@ -1659,15 +1659,15 @@ public class Calculator implements Constants {
             csere = 0;
           }
         } else {
-          csere = kozepallas(f);
+          csere = kozepallas(f, ellenveg, veg);
         }
 
         if (csere * e > veg * e) {
           veg = csere;
           lepes--;
-//            if (veg*e==1000){
-//                return veg;
-//            }//@@@@@@@@@@@@@@@@@@@@@@@@
+            if (veg * e >= ellenveg * e){
+              return veg;
+            }//@@@@@@@@@@@@@@@@@@@@@@@@
         } else {
           lepes--;
         }
@@ -1724,12 +1724,12 @@ public class Calculator implements Constants {
               } else if (allasEgyezes()) {
                 csere = 0;
               } else {
-                csere = kozepallas(f);
+                csere = kozepallas(f, ellenveg, veg);
               }
               if (csere * e > veg * e) {
                 veg = csere;
                 lepes--;
-//            if (veg*e==1000) return veg;//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                if (veg * e >= ellenveg * e) {return veg;}//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
               } else {
                 lepes--;
               }
@@ -1779,12 +1779,12 @@ public class Calculator implements Constants {
                     csere = 0;
                   }
                 } else {
-                  csere = kozepallas(f);
+                  csere = kozepallas(f, ellenveg, veg);
                 }
                 if (csere * e > veg * e) {
                   veg = csere;
                   lepes--;
-//            if (veg*e==1000) return veg;//@@@@@@@@@@@@@@@@@@@@@@@
+                  if (veg * e >= ellenveg * e) {return veg;}//@@@@@@@@@@@@@@@@@@@@@@@
                 } else {
                   lepes--;
                 }
@@ -1806,6 +1806,7 @@ public class Calculator implements Constants {
       e = -1;
     }
     int veg = e * -10010, csere, m, n, o, p;
+    int ellenveg = -veg;
 
     hibaSanc = false;
     sancol();
@@ -1845,16 +1846,16 @@ public class Calculator implements Constants {
             csere = 0;
           }
         } else {
-          csere = kozepallas(f);
+          csere = kozepallas(f, ellenveg, veg);
         }
 
         if (csere * e > veg * e) {
           veg = csere;
           lepes--;
-//            if (veg*e==1000){
-//                honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
-//                return veg;
-//            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if (veg * e >= ellenveg * e){
+              honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
+              return veg;
+            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         } else {
           lepes--;
         }
@@ -1903,7 +1904,7 @@ public class Calculator implements Constants {
             csere = 0;
           }
         } else {
-          csere = kozepallas(f);
+          csere = kozepallas(f, ellenveg, veg);
         }
 
         if (csere * e > veg * e) {
@@ -1913,10 +1914,10 @@ public class Calculator implements Constants {
           n = q;
           o = r;
           p = t;
-//            if (veg*e==1000){
-//                honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
-//                return veg;
-//            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if (veg * e >= ellenveg * e){
+              honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
+              return veg;
+            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         } else {
           lepes--;
         }
@@ -1981,7 +1982,7 @@ public class Calculator implements Constants {
               } else if (allasEgyezes()) {
                 csere = 0;
               } else {
-                csere = kozepallas(f);
+                csere = kozepallas(f, ellenveg, veg);
               }
 
               if (csere * e > veg * e) {
@@ -1991,10 +1992,10 @@ public class Calculator implements Constants {
                 p = hovab[l + 30];
                 veg = csere;
                 lepes--;
-                //            if (veg*e==1000){
-                //                honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
-                //                return veg;
-                //            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                if (veg * e >= ellenveg * e){
+                  honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
+                  return veg;
+                }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
               } else {
                 lepes--;
               }
@@ -2052,7 +2053,7 @@ public class Calculator implements Constants {
                     csere = 0;
                   }
                 } else {
-                  csere = kozepallas(f);
+                  csere = kozepallas(f, ellenveg, veg);
                 }
 
                 if (csere * e > veg * e) {
@@ -2062,10 +2063,10 @@ public class Calculator implements Constants {
                   p = hovab[1];
                   veg = csere;
                   lepes--;
-                  //            if (veg*e==1000){
-                  //                honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
-                  //                return veg;
-                  //            }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                  if (veg * e >= ellenveg * e){
+                    honnan[0]=m; honnan[1]=n; hova[0]=o; hova[1]=p;
+                    return veg;
+                  }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                 } else {
                   lepes--;
                 }

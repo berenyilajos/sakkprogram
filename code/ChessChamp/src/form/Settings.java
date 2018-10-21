@@ -1,6 +1,8 @@
 
 package form;
 
+import constants.Constants;
+
 import java.awt.event.ItemEvent;
 import javax.swing.JPanel;
 
@@ -8,10 +10,10 @@ import javax.swing.JPanel;
  *
  * @author lajos
  */
-public class Settings extends javax.swing.JFrame {
+public class Settings extends javax.swing.JFrame implements Constants {
 
   private int nyelv, szin, erosseg;
-  private final static int magyar = 1, angol = 0, sotet = 0, vilagos = 1, gyenge = 2, eros = 3;
+  private final static int magyar = 1, angol = 0, sotet = 0, vilagos = 1;
 
   /**
    * Creates new form Settings
@@ -36,7 +38,7 @@ public class Settings extends javax.swing.JFrame {
     } else {
       rbSotet.setSelected(true);
     }
-    if (erosseg == gyenge) {
+    if (erosseg == GYENGE) {
       rbKezdo.setSelected(true);
     } else {
       rbHalado.setSelected(true);
@@ -313,7 +315,7 @@ public class Settings extends javax.swing.JFrame {
         return;
       }
       javax.swing.JRadioButton rbtn = (javax.swing.JRadioButton) evt.getSource();
-      erosseg = (rbtn == rbKezdo) ? gyenge : eros;
+      erosseg = (rbtn == rbKezdo) ? GYENGE : EROS;
     }//GEN-LAST:event_levelItemStateChanged
 
 

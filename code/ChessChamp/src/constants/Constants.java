@@ -30,8 +30,8 @@ public interface Constants {
   final int URES = 0, K = 1, GY = 2, V = 3, B = 4, H = 5, F = 6, MAX_LEP = 401;
   final int SOT = -1, UR = 0, VIL = 1, MAX_PARTI_SZAM = 15;
   final String NINCS = "";
-  int GYENGE = 2;
-  int EROS = 3;
+  int GYENGE = 3;
+  int EROS = 5;
 
   final int a = 'a';
 // final int egy = '1';

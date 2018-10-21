@@ -621,7 +621,7 @@ class ChessGui extends JFrame implements Constants {
           throw new Exception("Nem megfelelő számok! Nyelv");
         }
         if (!(CALCULATOR.erosseg == GYENGE || CALCULATOR.erosseg == EROS)) {
-          throw new Exception("Nem megfelelő számok! Erosseg");
+          CALCULATOR.erosseg = GYENGE;
         }
 //            System.out.println(WHITE);
 //            System.out.println(BLACK);
