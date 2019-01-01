@@ -160,77 +160,73 @@ class ChessGui extends JFrame implements Constants {
     menuFile.add(itemAktualis);
     menuFile.addSeparator();
     menuFile.add(itemSettings);
-    itemMent.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        elment();
+//    itemMent.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        elment();
+//      }
+//    });
+    itemMent.addActionListener((ActionEvent e) -> elment());
+//    itemBetolt.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        betolt();
+//      }
+//    });
+    itemBetolt.addActionListener((ActionEvent e) -> betolt());
+//    itemElejere.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        if (CALCULATOR.lepes != 0) {
+//          klikkTorol();
+//          CALCULATOR.lepes = (gepjatszik == WHITE) ? 1 : 0;
+//          kiir();
+//        }
+//      }
+//    });
+    itemElejere.addActionListener((ActionEvent e) -> {
+      if (CALCULATOR.lepes != 0){
+        klikkTorol();
+        CALCULATOR.lepes = (gepjatszik == WHITE) ? 1 : 0;
+        kiir();
       }
     });
-//        itemMent.addActionListener((ActionEvent e) -> {
-//                    elment();
-//        });
-    itemBetolt.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        betolt();
+//    itemAktualis.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        if (akt_lepes != 0) {
+//          klikkTorol();
+//          CALCULATOR.lepes = akt_lepes;
+//          kiir();
+//        }
+//      }
+//    });
+    itemAktualis.addActionListener((ActionEvent e) -> {
+      if (akt_lepes != 0){
+        klikkTorol();
+        CALCULATOR.lepes = akt_lepes;
+        kiir();
       }
     });
-//        itemBetolt.addActionListener((ActionEvent e) -> {
-//                betolt();
-//        });
-    itemElejere.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        if (CALCULATOR.lepes != 0) {
-          klikkTorol();
-          CALCULATOR.lepes = (gepjatszik == WHITE) ? 1 : 0;
-          kiir();
-        }
-      }
-    });
-//        itemElejere.addActionListener((ActionEvent e) -> {
-//            if (CALCULATOR.lepes != 0){
-//                klikkTorol();
-//                CALCULATOR.lepes = (gepjatszik == WHITE) ? 1 : 0;
-//                kiir();
-//            }
-//        });
-    itemAktualis.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        if (akt_lepes != 0) {
-          klikkTorol();
-          CALCULATOR.lepes = akt_lepes;
-          kiir();
-        }
-      }
-    });
-//        itemAktualis.addActionListener((ActionEvent e) -> {
-//            if (akt_lepes != 0){
-//                klikkTorol();
-//                CALCULATOR.lepes = akt_lepes;
-//                kiir();
-//            }
-//        });
-    itemSettings.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
+//    itemSettings.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        int gepjatszikMost = gepjatszik;
+//        setSettings();
+//        if (gepjatszikMost != gepjatszik && !CALCULATOR.ALLAS[CALCULATOR.lepes].patt && CALCULATOR.ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes % 2 == vilagos && CALCULATOR.lepes < MAX_LEP + sotet) {
+//          GUI.update(GUI.getGraphics());
+//          geplep();
+//        }
+//      }
+//    });
+    itemSettings.addActionListener((ActionEvent e) -> {
         int gepjatszikMost = gepjatszik;
         setSettings();
-        if (gepjatszikMost != gepjatszik && !CALCULATOR.ALLAS[CALCULATOR.lepes].patt && CALCULATOR.ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes % 2 == vilagos && CALCULATOR.lepes < MAX_LEP + sotet) {
-          GUI.update(GUI.getGraphics());
-          geplep();
-        }
+      if (gepjatszikMost != gepjatszik && !CALCULATOR.ALLAS[CALCULATOR.lepes].patt && CALCULATOR.ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes % 2 == vilagos && CALCULATOR.lepes < MAX_LEP + sotet) {
+        GUI.update(GUI.getGraphics());
+        geplep();
       }
     });
-//        itemSettings.addActionListener((ActionEvent e) -> {
-//            int gepjatszikMost = gepjatszik;
-//            setSettings();
-//            if (gepjatszikMost != gepjatszik && !ALLAS[CALCULATOR.lepes].patt && ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes%2==vilagos && CALCULATOR.lepes<maxLep+sotet){
-//                gui.update(gui.getGraphics());
-//                geplep();  
-//            }
-//        });
     buttonFile.add(menuBarFile);
     tools.addSeparator();
     button6 = new JButton();
@@ -243,24 +239,20 @@ class ChessGui extends JFrame implements Constants {
     menu.add(itemMagyar);
     menu.add(itemEnglish);
     button6.add(menuBar);
-    itemMagyar.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        setNyelvMagyar();
-      }
-    });
-//        itemMagyar.addActionListener((ActionEvent e) -> {
-//            setNyelvMagyar();
-//        });
-    itemEnglish.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        setNyelvEnglish();
-      }
-    });
-//        itemEnglish.addActionListener((ActionEvent e) -> {
-//            setNyelvEnglish();
-//        });
+//    itemMagyar.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        setNyelvMagyar();
+//      }
+//    });
+    itemMagyar.addActionListener((ActionEvent e) -> setNyelvMagyar());
+//    itemEnglish.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        setNyelvEnglish();
+//      }
+//    });
+    itemEnglish.addActionListener((ActionEvent e) -> setNyelvEnglish());
     String str;
     str = (nyelv == magyar) ? "Új játék" : "New Game";
     newGameAction = new JButton(str);
@@ -420,23 +412,23 @@ class ChessGui extends JFrame implements Constants {
           }
 
         });
-        sakktabla[i][j].addActionListener(new ActionListener() {
-          @Override
-          public void actionPerformed(ActionEvent e) {
-            if (ujTiszt && !CALCULATOR.ALLAS[CALCULATOR.lepes].patt && CALCULATOR.ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes % 2 == vilagos && CALCULATOR.lepes < MAX_LEP + sotet) {
-              akt_lepes = CALCULATOR.lepes;
-              geplep();
-            }
-            ujTiszt = false;
+//        sakktabla[i][j].addActionListener(new ActionListener() {
+//          @Override
+//          public void actionPerformed(ActionEvent e) {
+//            if (ujTiszt && !CALCULATOR.ALLAS[CALCULATOR.lepes].patt && CALCULATOR.ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes % 2 == vilagos && CALCULATOR.lepes < MAX_LEP + sotet) {
+//              akt_lepes = CALCULATOR.lepes;
+//              geplep();
+//            }
+//            ujTiszt = false;
+//          }
+//        });
+        sakktabla[i][j].addActionListener((ActionEvent e) -> {
+          if (ujTiszt && !CALCULATOR.ALLAS[CALCULATOR.lepes].patt && CALCULATOR.ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes % 2 == vilagos && CALCULATOR.lepes < MAX_LEP + sotet) {
+            akt_lepes = CALCULATOR.lepes;
+            geplep();
           }
+          ujTiszt = false;
         });
-//            sakktabla[i][j].addActionListener((ActionEvent e) -> {
-//                if (ujTiszt && !ALLAS[CALCULATOR.lepes].patt && ALLAS[CALCULATOR.lepes].allasIsm != 2 && CALCULATOR.lepes%2==vilagos && CALCULATOR.lepes<maxLep+sotet){
-//                    akt_lepes = CALCULATOR.lepes;
-//                    geplep();
-//                }
-//                ujTiszt = false;
-//            });
 
         //Játékoslép és gép lép egyben változat:
 //            sakktabla[i][j].addActionListener((ActionEvent e) -> {
