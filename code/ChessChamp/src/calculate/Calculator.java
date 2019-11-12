@@ -350,6 +350,7 @@ public class Calculator implements Constants {
     ALLAS[lepes + 1].v_sakk = false;
     ALLAS[lepes + 1].s_sakk = false;
     ALLAS[lepes + 1].patt = false;
+    an_pass = false;
     lepes++;
   }
 
